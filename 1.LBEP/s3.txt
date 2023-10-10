@@ -1,0 +1,19 @@
+Session 2 - 
+
+CYP (p45)
+1. true
+2. whole number/integer
+3. false
+4. float - double
+5. void
+6. unary and binary
+7. ++ , --
+
+TIY (p46)
+1.
+8,23				-> integer constant
+10.34 			-> floating point number
+A B C			-> invalid identifier names
+abc, $abc, _A1		-> valid identifier names
+1211234.86868686686 	-> double
+'A'					-> character constant
