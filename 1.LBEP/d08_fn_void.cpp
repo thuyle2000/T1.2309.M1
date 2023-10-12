@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+// demo lap trinh ham - ko co gia tri tra ve
 
 // khai bao cac ham da dinh nghia trong file chuong trinh nay
 void print(int a[], int n); // prototype cua ham print()
 
-// demo lap trinh ham - ko co gia tri tra ve
 int main()
 {
     system("cls");
