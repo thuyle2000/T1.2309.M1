@@ -25,8 +25,6 @@ int main()
         }
     }//ket thuc vong FOR
     printf("=> Co [%d] so chan trong day so \n", count);
-
-    
 }
 
 /*
