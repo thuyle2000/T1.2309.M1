@@ -5,28 +5,30 @@
 
 /* ham kiem tra 1 so nguyen, co phai la so nguyen to ko ?
     ten ham : isPrime()
-    tham so : int n
+    tham so hinh thuc : int n
     gia tri tra ve :  0 khi n la hop so,
                       1 khi n la so nguyen to
   */
-int isPrime(int n); // khai bao ham
+char author[] = "FPT-Aptech T1.2309.M1";
 
+int isPrime(int n); // khai bao ham
 int main()
 {
     system("cls");
-    int n;
+    int a;
     printf(" CHUONG TRINH KIEM TRA SO NGUYEN TO \n");
+    printf(" tac gia: %s \n", author);
 
     do {
         printf(" - nhap 1 so nguyen duong bat ky (>1) : ");
-        scanf("%d", &n);
-    } while (n < 2);
+        scanf("%d", &a);
+    } while (a < 2);
 
-    if (isPrime(n) == 1)    {
-        printf("=> [%d] la so nguyen to !\n", n);
+    if (isPrime(a) == 1)    {
+        printf("=> [%d] la so nguyen to !\n", a);
     }
     else   {
-        printf("=> [%d] la hop so !\n", n);
+        printf("=> [%d] la hop so !\n", a);
     }
 }
 
@@ -34,7 +36,8 @@ int main()
 int isPrime(int n)
 {
     int r = 1; // gia su n la so nguyen to => r = 1;
-
+    
+    // printf("written by: %s\n", author);
     for (int i = 2; i <= sqrt(n); i++)  {
         if (n % i == 0)   {
             // i la uoc so cua n => n ko phai la so nguyen to
