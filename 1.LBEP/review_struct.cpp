@@ -64,14 +64,14 @@ void QLTV()
         scanf("%d", &dstv[i].dob.yy);
     }
 
-    // in ra danh sach thanh vien
+    // 1.  in ra danh sach thanh vien
     printf("\n Danh sach thanh vien \n");
     for (int i = 0; i < n; i++)
     {
         printf("%2d. %-20s %-20s %02d-%02d-%d \n", i + 1, dstv[i].name, dstv[i].email, dstv[i].dob.dd, dstv[i].dob.mm, dstv[i].dob.yy);
     }
 
-    // in ra danh sach thanh vien theo ten yeu cau
+    // 2.  in ra danh sach thanh vien theo ten yeu cau
     char ten[31];
     fseek(stdin, 0, SEEK_END);
     printf("\n - nhap ten thanh vien muon tim: ");
@@ -86,19 +86,18 @@ void QLTV()
 
             cntTen++;
         }
-    } //ket thuc FOR
+    } // ket thuc FOR
 
-    if(cntTen==0){
+    if (cntTen == 0)
+    {
         printf(" >>> Ko tim thay thanh vien co ten [%s]!!! \n\n", ten);
     }
-    else{
-        printf(" >>> Tim thay %d thanh vien co ten [%s]!!! \n\n",cntTen, ten);
+    else
+    {
+        printf(" >>> Tim thay %d thanh vien co ten [%s]!!! \n\n", cntTen, ten);
     }
-    
 
-
-
-// in ra danh sach thanh vien theo nam sinh duoc yeu cau
+    // 3.  in ra danh sach thanh vien theo nam sinh duoc yeu cau
     int namSinh;
     fseek(stdin, 0, SEEK_END);
     printf("\n - nhap nam sinh muon tim: ");
@@ -107,21 +106,62 @@ void QLTV()
     int cntNam = 0;
     for (int i = 0; i < n; i++)
     {
-        if (dstv[i].dob.yy ==namSinh)
+        if (dstv[i].dob.yy == namSinh)
         {
             printf(" %-20s %-20s %02d-%02d-%d \n", dstv[i].name, dstv[i].email, dstv[i].dob.dd, dstv[i].dob.mm, dstv[i].dob.yy);
 
             cntNam++;
         }
-    } //ket thuc FOR
+    } // ket thuc FOR
 
-    if(cntNam==0){
+    if (cntNam == 0)
+    {
         printf(" >>> Ko tim thay thanh vien co nam sinh [%d] !!! \n\n", namSinh);
     }
-    else{
-        printf(" >>> Tim thay %d thanh vien sin nam [%d] !!! \n\n",cntNam, namSinh);
+    else
+    {
+        printf(" >>> Tim thay %d thanh vien sin nam [%d] !!! \n\n", cntNam, namSinh);
     }
-    
 
+    // 4. in ra danh sach thanh vien, duoc sap xep theo thu tu ho ten (a-z)
+    struct MEMBER tam;
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int k = i + 1; k < n; k++)
+        {
+            if (strcmp(dstv[i].name, dstv[k].name) > 0)
+            {
+                tam = dstv[i];
+                dstv[i] = dstv[k];
+                dstv[k] = tam;
+            }
+        }
+    }
 
+    printf("\n\n Danh sach thanh vien, xep thu tu theo ten: \n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%2d. %-20s %-20s %02d-%02d-%d \n", i + 1, dstv[i].name, dstv[i].email, dstv[i].dob.dd, dstv[i].dob.mm, dstv[i].dob.yy);
+    }
+
+    // 5. in ra danh sach thanh vien, duoc sap xep theo thu tu nam sinh (giam dan)
+    struct MEMBER tam2;
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int k = i + 1; k < n; k++)
+        {
+            if (dstv[i].dob.yy < dstv[k].dob.yy)
+            {
+                tam2 = dstv[i];
+                dstv[i] = dstv[k];
+                dstv[k] = tam2;
+            }
+        }
+    }
+
+    printf("\n\n Danh sach thanh vien, xep thu tu theo nam sinh: \n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%2d. %-20s %-20s %02d-%02d-%d \n", i + 1, dstv[i].name, dstv[i].email, dstv[i].dob.dd, dstv[i].dob.mm, dstv[i].dob.yy);
+    }
 }
