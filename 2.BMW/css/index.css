@@ -1,0 +1,21 @@
+/* style sheet danh cho index.html */
+
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+
+    text-shadow: 3px 3px 3px grey;
+}
+
+button{
+    background-color: green;
+    color: wheat ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: solid thin white;
+    box-shadow: 3px 3px 3px gray;
+}
