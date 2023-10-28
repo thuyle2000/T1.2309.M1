@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hyper-link</title>
+    <link rel="stylesheet" href="css/d02.css">
+
+    <!-- internal/embedded style -->
+    <style>
+        p{
+            font-size: 1.1em;
+            font-style: italic;
+            color: green;
+        }
+        p::first-letter{
+            font-family: cursive;
+            font-weight: bolder;
+            font-size: 1.75em;
+            color: peru;
+            text-shadow: 4px 3px 3px lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>HyperLink Demo</h2>
+    <hr>
+    <p>Absolute Path</p>
+    <ul>
+        <li><a href="https://vnexpress.net/" target="_blank">Doc bao moi ngay </a> </li>
+        <li><a href="https://www.w3schools.com/html/default.asp" target="_blank"> Hoc thiet ke web HTML </a> </li>
+        <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Hoc thiet ke web CSS</a> </li>
+    </ul>
+    <hr>
+    <p>Relative Path</p>
+    <ul>
+        <li><a href="d01_format_v2.html">format Lession</a> </li>
+        <li><a href="d02_list_v2.html">List Lession</a> </li>
+    </ul>
+    <hr>
+    <p>Email Link</p>
+    Thac mac biet hoi ai ? <a href="mailto:sonphilong@fpt.edu.vn?subject=thac mac can giai dap">
+    <img src="images/email.jpg" alt="la thu" style="width: 60Px;float: left;"></a>
+</body>
+
+</html>
