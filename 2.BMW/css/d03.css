@@ -1,0 +1,38 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+div{
+    column-count: 2;
+    column-gap: 40px;
+    width: 90vw;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 3px 3px 3px gray;
+    border: thin double gray;
+}
+
+p{
+    text-align: justify;
+    margin-right: 20px;
+}
+
+.royal{
+    color: red;
+    font-weight: bold;
+}
+span.note{
+    font-style: italic;
+    text-align: center;
+    display: block;
+    color: green;
+}
+
+img.demo{
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px lightgray;
+    padding: 20px 20px;
+
+    display: block;
+    margin: auto;
+}
