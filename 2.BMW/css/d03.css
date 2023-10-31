@@ -1,7 +1,7 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-div{
+div.container{
     column-count: 2;
     column-gap: 40px;
     width: 90vw;
@@ -35,4 +35,22 @@ img.demo{
 
     display: block;
     margin: auto;
+}
+
+a{
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: beige;
+    transition: 2s;
+}
+
+a:hover{
+    color: yellow;
+    background-color: green;
+}
+
+nav{
+    border: double thin green;
+    padding: 10px;
+    background-color: green;
 }
