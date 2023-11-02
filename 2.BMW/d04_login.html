@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>layout</title>
+    <title>login</title>
     <link rel="stylesheet" href="css/d04.css">
+    <style>
+        section
+        {
+            background-image: url('images/christmas-background.jpg');
+        }
+    </style>
 </head>
 
 <body>
@@ -27,7 +33,29 @@
 
         <!-- noi dng chinh cua trang -->
         <section>
-            <img src="images/christmas-background.jpg" alt="" class="main">
+            <h4>Login</h4>
+            <form action="" method="get">               
+                <div>
+                    <label for="">Username: </label> <br />
+                    <input type="text" name="user" id="user" />
+                </div>
+
+                <div>
+                    <label for="">Password: </label> <br />
+                    <input type="password" name="pass" id="pass" />
+                </div>
+
+                <div>
+                    <input type="checkbox" name="rem" id="rem"> Remember
+                </div>
+
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+
+            </form>
+
         </section>
 
         <!-- tieu de cuoi trang -->
