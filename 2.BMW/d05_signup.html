@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up</title>
+    <link rel="stylesheet" href="css/d04.css">
+    <link rel="stylesheet" href="css/form.css">
+    <style>
+        section {
+            background-image: url('images/christmas-background.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <!-- tieu de dau trang -->
+        <header>
+            <h2>Noel Coming here .... <span>~ Noel~ Noel~ Noel~</span> </h2>
+        </header>
+
+        <!-- menu -->
+        <nav>
+            <a href="d04_layout.html">home</a>
+            <a href="">product</a>
+            <a href="">event</a>
+            <a href="">about-us</a>
+            <a href="d05_signup.html">sign-up</a>
+            <a href="d04_login.html">login</a>
+        </nav>
+
+        <!-- noi dng chinh cua trang -->
+        <section>
+
+            <form action="d04_layout.html" method="get">
+                <h4>Register</h4>
+                <div>
+                    <label for="">Username<span class="alert">*</span></label> <br />
+                    <input type="text" name="username" id="user" required value="guest" autofocus />
+                </div>
+
+                <div>
+                    <label for="">Password<span class="alert">*</span></label> <br />
+                    <input type="password" name="matkhau" id="pass" required placeholder="nhap mat khau" value="123" />
+                </div>
+                <div>
+                    <label for="">Confirm Password<span class="alert">*</span></label> <br />
+                    <input type="password" name="matkhau2" id="pass2" required placeholder="nhap lai mat khau"
+                        value="123" />
+                </div>
+
+
+
+
+                <div>
+                    <label for="">email<span class="alert">*</span></label> <br />
+                    <input type="email" name="email" id="email" value="abc@gmail.com" required />
+                </div>
+
+                <div>
+                    <label for="">phone<span class="alert">*</span></label> <br />
+                    <input type="tel" name="phone" id="phone" required pattern="[+]?[0-9]{2,4}"
+                        title="format (+)xx(xx), x:digit" value="+911" />
+                </div>
+
+
+
+                <div>
+                    <label for="">Hobbies</label> <br>
+                    <input type="checkbox" name="eat" id="eat" checked
+                    value="an hang"> Eating out
+                    <input type="checkbox" name="game" id="game"
+                    value="choi game"> Gaming
+                    <input type="checkbox" name="travel" id="travel"
+                    value="du lich" checked> Traveling
+                </div>
+
+                <div>
+                    <label for="">Gender</label> <br>
+                    <input type="radio" name="gender" id="male" checked value="male"> Male
+                    <input type="radio" name="gender" id="female" value="female"> Female
+                    <input type="radio" name="gender" id="other" value="other"> Other
+                </div>
+
+                <div>
+                    <label for="">Home Town</label> <br>
+                    <select name="home" id="home" required>
+                        <option value="">--Select your home-town--</option>
+                        <option value="Hanoi">ha noi</option>
+                        <option value="Hue">hue</option>
+                        <option value="Saigon" selected>saigon</option>
+                        <option value="CanTho">can tho</option>
+                        <option value="Binhduong">binh duong</option>
+                        <option value="Nhatrang">nha trang</option>
+                        <option value="Dalat">dalat</option>
+                        <option value="Nghe an">nghe an</option>
+                        <option value="Haiphong">hai phong</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="">Birthday</label> <br>
+                    <input type="date" name="dob" id="dob" value="2004-08-15">                    
+                </div>
+
+                <div>
+                    <label for="">Rating</label><br>
+                    <input type="number" name="rate" id="rate"
+                    min="1" max="10" value="5" required>
+                </div>
+
+                <div>
+                    <br />
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+
+            </form>
+
+        </section>
+
+        <!-- tieu de cuoi trang -->
+        <footer>
+            &copy; Nov-2023. Toàn bộ bản quyền thuộc FPT.Aptech.2309.M1
+        </footer>
+    </div>
+</body>
+
+</html>
