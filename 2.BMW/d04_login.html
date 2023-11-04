@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="css/d04.css">
+    <link rel="stylesheet" href="css/form.css">
     <style>
         section
         {
             background-image: url('images/christmas-background.jpg');
         }
+
     </style>
 </head>
 
@@ -33,16 +35,17 @@
 
         <!-- noi dng chinh cua trang -->
         <section>
-            <h4>Login</h4>
-            <form action="" method="get">               
+            
+            <form action="d04_layout.html" method="get">     
+                <h4>Login</h4>          
                 <div>
-                    <label for="">Username: </label> <br />
-                    <input type="text" name="user" id="user" />
+                    <label for="">Username<span class="alert">*</span></label> <br />
+                    <input type="text" name="username" id="user" required/>
                 </div>
 
                 <div>
-                    <label for="">Password: </label> <br />
-                    <input type="password" name="pass" id="pass" />
+                    <label for="">Password<span class="alert">*</span></label> <br />
+                    <input type="password" name="matkhau" id="pass" required />
                 </div>
 
                 <div>
