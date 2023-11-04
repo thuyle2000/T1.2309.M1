@@ -68,3 +68,27 @@ footer{
     margin-bottom: -10px;
 }
 
+
+table{
+    border: thin solid burlywood;
+    box-shadow: 3px 3px 3px gainsboro;
+}
+
+thead{
+    background-color: green;
+    color: antiquewhite;
+}
+thead th {
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+td{
+    border: solid thin gray;
+    padding: 5px 10px;
+}
+
+tbody tr:hover{
+    background-color: aliceblue;
+    color: green;
+}
