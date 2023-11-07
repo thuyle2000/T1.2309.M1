@@ -72,6 +72,7 @@ footer{
 table{
     border: thin solid burlywood;
     box-shadow: 3px 3px 3px gainsboro;
+    border-collapse: collapse;
 }
 
 thead{
