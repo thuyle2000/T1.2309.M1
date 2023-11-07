@@ -14,7 +14,11 @@
 
     <input type="button" value="alert()" id="btAlert">
     <input type="button" value="confirm()" id="btConfirm">
+    <input type="button" value="prompt()" id="btPrompt">
 </body>
+
+
+
 
 <!-- phan lap trinh ma kich ban -->
 <script>
@@ -32,6 +36,24 @@ document.getElementById("btConfirm").onclick = function(){
         window.close();
     }s
 };
+
+
+
+// lap trinh cho su kien click doi voi nut co id = 'btPrompt'
+document.getElementById("btPrompt").onclick = function(){
+    var kq = prompt("How old r u ?", "17");
+    if(kq!=""){
+        var tuoi = parseInt(kq);
+        if(tuoi <18){
+            alert("Hello, Baby !");
+        }
+        else{
+            alert("Hello, Sir/Madam !");
+        }
+    }
+};
+
+
 
 </script>
 
