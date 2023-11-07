@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="css/d04.css">
     <link rel="stylesheet" href="css/form.css">
     <style>
-        section
-        {
+        section {
             background-image: url('images/christmas-background.jpg');
         }
-
     </style>
 </head>
 
@@ -35,25 +33,18 @@
 
         <!-- noi dng chinh cua trang -->
         <section>
-            
-            <form action="d04_layout.html" method="get">     
-                <h4>Login</h4>          
+
+            <form action="d04_layout.html" method="get" id="login_form">
+                <h4>Login</h4>
                 <div>
                     <label for="">Username<span class="alert">*</span></label> <br />
-                    <input type="text" 
-                    name="username" id="user" 
-                    required
-                    placeholder="nhap ma TK"
-                    value="guest"
-                    autofocus/>
+                    <input type="text" name="username" id="user" required placeholder="nhap ma TK" value="guest"
+                        autofocus />
                 </div>
 
                 <div>
                     <label for="">Password<span class="alert">*</span></label> <br />
-                    <input type="password" 
-                    name="matkhau" id="pass" 
-                    required
-                    placeholder="nhap mat khau" />
+                    <input type="password" name="matkhau" id="pass" required placeholder="nhap mat khau" />
                 </div>
 
                 <div>
@@ -61,7 +52,7 @@
                 </div>
 
                 <div>
-                    <br/>
+                    <br />
                     <input type="submit" value="Submit">
                     <input type="reset" value="Reset">
                 </div>
@@ -75,6 +66,38 @@
             &copy; Nov-2023. Toàn bộ bản quyền thuộc FPT.Aptech.2309.M1
         </footer>
     </div>
+
+    <!-- lap trinh ma kich ban -->
+    <script>
+
+        //lap trinh cho su kien bam nut [submit], tren form 'login_form'
+        document.getElementById('login_form').onsubmit = function (event) {
+
+            //vo hieu hoa xu ly mac dinh cua nut submit (ie. ko open trang action)
+            event.preventDefault();
+
+            //lay cac du kien nhap tren form
+            var user = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+
+            if(user =="aptech"){
+                if (pass=="123"){
+                    alert("Welcome to My Website !");
+                    window.location.href = "d04_layout.html";
+                }
+                else{
+                    alert("Wrong password ! Plz retry !");
+                    document.getElementById("pass").focus();
+                }
+            }
+            else{
+                alert("Hi, stranger ! Plz sign-up !");
+                window.location.href = "d05_signup.html";
+            }
+
+        }
+
+    </script>
 </body>
 
 </html>
