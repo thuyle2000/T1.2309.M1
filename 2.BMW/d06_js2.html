@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-demo</title>
+    <link rel="stylesheet" href="css/d04.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <h2>Javascript Demo</h2>
+    <p>Demo Build-in Functions</p>
+    <hr>
+
+    <input type="button" value="alert()" id="btAlert">
+    <input type="button" value="confirm()" id="btConfirm">
+</body>
+
+<!-- phan lap trinh ma kich ban -->
+<script>
+// lap trinh cho su kien click doi voi nut co id = 'btAlert'
+document.getElementById("btAlert").onclick = function(){
+    alert("Fire, Fire ! Go away, now !!!");
+};
+
+
+// lap trinh cho su kien click doi voi nut co id = 'btConfirm'
+document.getElementById("btConfirm").onclick = function(){
+    var kq = confirm("Close Window ?");
+    if(kq==true){
+        //bam nut OK: tat tab hien hanh trong trinh duyet
+        window.close();
+    }s
+};
+
+</script>
+
+</html>
