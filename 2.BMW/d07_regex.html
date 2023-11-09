@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex</title>
+    <link rel="stylesheet" href="css/d04.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2> Regular expression demo</h2>
+        <hr>
+
+        <form action="" id="form_input">
+            <div>
+                <label for="">fullname</label>
+                <input type="text" name="fname" id="fname" required value="dao son"
+                title="only characters or blank">
+            </div>
+
+            <div>
+                <label for="">telephone</label>
+                <input type="text" name="phonw" id="phone" required value="123 12345"
+                title="xxx xxxxx[xxx], x:digits">
+            </div>
+            <br>
+            <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- lap trinh ma kich ban, kiem tra du lieu nhap sau khi user bam nut [submit] -->
+    <script>
+        ///lap trinh cho su kien [submit] cua 'form_input'
+        document.getElementById("form_input").onsubmit=function(event){
+            //vo hieu hoa chuc nang submit form
+            event.preventDefault();
+
+            //lay du lieu nhap tren form
+            let name = new String(document.getElementById("fname").value).trim();
+
+            let phone = new String(document.getElementById("phone").value).trim();
+
+            let re =/^[a-z A-Z]+$/;
+        
+            if(name.match(re)==null){
+                alert("invalid fullname. Plz re-enter.");
+                document.getElementById("fname").focus();
+                return;
+            }
+
+            re =/^\d{3} \d{5,8}$/;
+            if(phone.match(re)==null){
+                alert("invalid phone. Plz re-enter.");
+                document.getElementById("phone").focus();
+                return;
+            }            
+
+            //tao 1 array chua ten va so dien thoai nhap tren form
+            let a = [];  //khai bao mang a chua co du lieu
+            a.push('YOUR PROFILE \n');
+            a.push(`- fullname: ${name}`);  //a[0]='- fullname: ${name}';
+            a.push(`- phone: ${phone}`); //a[1]='- phone: ${phone}';
+            
+            // xuat noi dung mang a[] trong hop thong bao alert()
+            alert(a.join("\n"));
+        }
+
+    </script>
+</body>
+
+</html>
