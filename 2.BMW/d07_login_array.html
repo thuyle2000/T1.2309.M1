@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/d04.css">
+    <link rel="stylesheet" href="css/form.css">
+    <style>
+        section {
+            background-image: url('images/christmas-background.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <!-- tieu de dau trang -->
+        <header>
+            <h2>Noel Coming here .... <span>~ Noel~ Noel~ Noel~</span> </h2>
+        </header>
+
+        <!-- menu -->
+        <nav>
+            <a href="d04_layout.html">home</a>
+            <a href="">product</a>
+            <a href="">event</a>
+            <a href="">about-us</a>
+            <a href="d05_signup.html">sign-up</a>
+            <a href="d04_login.html">login</a>
+        </nav>
+
+        <!-- noi dng chinh cua trang -->
+        <section>
+
+            <form action="d04_layout.html" method="get" id="login_form">
+                <h4>Login</h4>
+                <div>
+                    <label for="">Username<span class="alert">*</span></label> <br />
+                    <input type="text" name="username" id="user" required placeholder="nhap ma TK" value="guest"
+                        autofocus />
+                </div>
+
+                <div>
+                    <label for="">Password<span class="alert">*</span></label> <br />
+                    <input type="password" name="matkhau" id="pass" required placeholder="nhap mat khau" />
+                </div>
+
+                <div>
+                    <input type="checkbox" name="rem" id="rem"> Remember
+                </div>
+
+                <div>
+                    <br />
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+
+            </form>
+
+        </section>
+
+        <!-- tieu de cuoi trang -->
+        <footer>
+            &copy; Nov-2023. Toàn bộ bản quyền thuộc FPT.Aptech.2309.M1
+        </footer>
+    </div>
+
+    <!-- lap trinh ma kich ban -->
+    <script>
+
+        //lap trinh cho su kien bam nut [submit], tren form 'login_form'
+        document.getElementById('login_form').onsubmit = function (event) {
+
+            //vo hieu hoa chuc nang mac dinh cua nut submit (ie. ko open trang action)
+            event.preventDefault();
+
+            //lay cac du kien nhap tren form
+            var user = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+
+            //khai bao mang a_users chua danh muc cac TK hop le
+            let a_users = [
+                ["aptech", "123"],
+                ["admin", "admin"],
+                ["guest", "guest"],
+                ["staff", "abc"],
+                ["trinh", "12345"]
+            ];
+            let n = a_users.length; // lay tong so pt cua mang 'a_users[]'
+
+            //vong lap for, duyet tung bo TK trong mang 'a_users[]'
+            for (const acc of a_users) {
+                if (user == acc[0]) {
+                    if (pass == acc[1]) {
+                        alert("Welcome to My Website !");
+                        window.location.href = "d07_regex.html";
+                        return;
+                    }
+                    else {
+                        alert("Wrong password ! Plz retry !");
+                        document.getElementById("pass").focus();
+                        return;
+                    }
+                }
+            }
+
+            if(confirm("Hi, stranger ! Plz sign-up !")==true){
+                window.location.href = "d05_signup.html";
+            }
+            
+        }
+
+    </script>
+</body>
+
+</html>
