@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+    <link rel="stylesheet" href="css/d04.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Javascript Function Demo</h2>
+        <hr>
+        <form action="" onsubmit="printBill();">
+            <h4>Order</h4>
+            <div>
+                <label for="">Product</label>
+                <select name="pro" id="pro" required
+                    onchange="getPrice();">
+                    <option value=""> -- select any product --</option>
+                    <option value="12000">coca cola</option>
+                    <option value="11000">pepsi cola</option>
+                    <option value="10000">7up</option>
+                    <option value="15000">snack</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Unit price</label>
+                <input type="text" name="price" id="price" readonly>
+            </div>
+
+            <div>
+                <label for="">Quantity</label>
+                <input type="number" name="qty" id="qty" required
+                    min="1" max="100" value="1">
+            </div>
+
+            <br>
+            <div>
+                <button type="submit">Order</button>
+                <button type="reset">Reset</button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- phan ma kich ban xu ly viec thay doi sp=> doi don gia, va in bill khi bam [submit] -->
+    <script>
+
+        //ham lay don gia cua sp duoc chon tren o nhap co id = [pro]
+        function getPrice(){
+            let sp = document.getElementById("pro");
+
+            let don_gia = sp.value;
+            console.log(`don gia = ${don_gia}`);
+
+            document.getElementById("price").value = don_gia;
+        }
+
+        //ham in bill ra hop thong bao alert, khi user bam nut [order]
+        function printBill(){
+            //khai bao mang a[] chua cac dong noi dung cua 1 hoa don
+            let a = ["Bill Detail \n"];
+
+            let sp = document.getElementById("pro");
+            let tensp = sp.options[sp.selectedIndex].text;
+            let don_gia = sp.value;
+
+            a.push(` - Product: ${tensp}`);
+            a.push(` - Unit price: ${don_gia}`);
+
+            let sl = parseInt(document.getElementById("qty").value);
+            const amt = sl * don_gia;
+
+            a.push(` - Quantity: ${sl}`);
+            a.push(` -----------------`);
+            a.push(`   AMOUNT: ${amt} `);
+
+            alert(a.join('\n'));
+        }
+
+    </script>
+</body>
+</html>
