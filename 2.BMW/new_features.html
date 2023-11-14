@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new-features</title>
+</head>
+
+<body>
+    <h2>new feature ecma script 2022</h2>
+</body>
+
+</html>
+<script>
+    function resolveAfter2Seconds(x) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(x * 2);
+            }, 2000);
+        });
+    }
+
+    async function f1() {
+        const x = await resolveAfter2Seconds(10);
+        console.log(x); // 10
+    }
+
+    // f1();
+
+    function at() {
+        let seasons = ['xuan', 'ha', 'thu', 'dong'];
+        console.log('seasons: ' + seasons);
+        console.log('seasons[0]: ' + seasons[0]);
+        console.log('seasons[seasons.length-1]: ' + seasons[seasons.length - 1]);
+        console.log('seasons[seasons.length]): ' + seasons[seasons.length]);
+
+        //ecma-script 2012
+        console.log('seasons.at(0): ' + seasons.at(0));
+        console.log('seasons.at(-1): ' + seasons.at(-1));
+        console.log('seasons.at(-4): ' + seasons.at(-4));
+    }
+    // at();
+
+    function hasOwn() {
+        let user = {
+            name: 'Steve Job',
+            role: 'admin'
+        }
+        console.log(user);
+        console.log(Object.hasOwn(user, 'role'));
+        console.log(Object.hasOwn(user, 'rate'));
+    }
+    // hasOwn();
+
+
+    function flag_d() {
+        let s = 'helloAndelloEveryone !';
+        let re = /hello(\w)/g;
+        let r = [...s.matchAll(re)];
+        // console.log(r[0]);
+
+        let re2 = /hello(\w)/dg;
+        let r2 = [...s.matchAll(re2)];
+        console.log(r2);
+    }
+    flag_d();
+
+</script>
