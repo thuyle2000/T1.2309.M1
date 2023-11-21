@@ -33,6 +33,7 @@
 <body>
     <div class="container">
         <h2>Registration Form</h2>
+        <a href="home.html">Return Home</a>
         <hr>
         <p>
             Notes:
@@ -143,7 +144,6 @@
             
             let email = document.getElementById("email").value;
             let pattern_email = new RegExp("^[a-z][a-z_0-9]+@[a-z0-9]{2,6}(\.[a-z0-9]{2,4})+$", "i");
-
 
             if (email.match(pattern_email) == null) {
                 alert("Error: Invalid email.\n - Plz re-enter!");
