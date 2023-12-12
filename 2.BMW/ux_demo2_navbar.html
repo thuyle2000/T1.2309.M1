@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- khoi tieu de -->
+        <div class="mt-2 p-3 bg-info text-white rounded">
+            Navbar Demo
+        </div>
+
+        <!-- khoi menu co ban, menu doc -->
+        <div class="container">
+            <ul>
+                <li><a href="ux_demo2_navbar.html">home</a></li>
+                <li><a href="d05_table_member.html">members</a></li>
+                <li><a href="d04_login.html">login</a></li>
+                <li><a href="#about-us">about us</a></li>
+            </ul>
+        </div>
+
+
+        <!-- khoi menu ngang -->
+        <div class="container-fluid m-2">
+            <nav class="navbar navbar-expand-sm bg-dark-subtle">
+                <div class="container-fluid">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="ux_demo2_navbar.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="d05_table_member.html">members</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="d04_login.html">login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-us">about us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- khoi menu co mau -->
+        <div class="container-fluid m-2">
+            <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+                <div class="container-fluid">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="ux_demo2_navbar.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="d05_table_member.html">members</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="d04_login.html">login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#about-us">about us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- khoi menu co logo, form tim kiem -->
+        <div class="container-fluid m-2">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">members</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">login</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="text" placeholder="Search">
+                            <button class="btn btn-warning" type="button">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- Khoi trinh dien slider (carousel/slide show) -->
+        <div class="container offset-1 col-10 p-5">
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+
+
+                <div class="container">
+
+                </div>
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/noel 1.jpg" alt="Noel 1" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3>Noel 1</h3>
+                            <p>We had such a great time !</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/noel 2.jpg" alt="Noel 2" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3>Noel 2023</h3>
+                            <p>Thank you, We had a great time!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/noel 3.jpg" alt="Noel 3" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3>Noel 3</h3>
+                            <p>We love the Big Gift!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- khoi about us -->
+        <div id="about-us">
+            <h4>Here am I !</h4>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4856.600468185309!2d106.6664111751105!3d10.78678278426606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1701311911495!5m2!1sen!2s"
+                width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

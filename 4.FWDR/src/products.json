@@ -1,0 +1,26 @@
+[
+    {
+        "id": "p01",
+        "name": "cay thong noel 0.5m",
+        "price": 12.3456,
+        "pic": "chirstmas-tree-1.jpg"
+    },
+    {
+        "id": "p02",
+        "name": "cay thong noel 75cm",
+        "price": 15,
+        "pic": "chirstmas-tree-2.jpg"
+    },
+    {
+        "id": "p03",
+        "name": "cay thong noelgiang sinh",
+        "price": 17.29,
+        "pic": "chirstmas-tree-3.jpg"
+    },
+    {
+        "id": "p04",
+        "name": "cay thong giang sinh 110cm",
+        "price": 15,
+        "pic": "chirstmas-tree-4.jpg"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "chirstmas tree 1",
+        "pic": "chirstmas-tree-1.jpg",
+        "price": 10
+    },
+    {
+        "id": 2,
+        "name": "chirstmas tree 2",
+        "pic": "chirstmas-tree-2.jpg",
+        "price": 9.5
+    },
+    {
+        "id": 3,
+        "name": "chirstmas tree 3",
+        "pic": "chirstmas-tree-3.jpg",
+        "price": 12
+    },
+    {
+        "id": 4,
+        "name": "chirstmas tree 4",
+        "pic": "chirstmas-tree-4.jpg",
+        "price": 8.4
+    }
+]
