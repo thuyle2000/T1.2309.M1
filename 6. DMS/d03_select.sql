@@ -69,3 +69,43 @@ select * from tbStudent where lastname LIKE 'tran %'
 -- xem/tim sinh vien co ho 'tran' hoac 'nguyen'
 select * from tbStudent 
 	where lastname LIKE 'tran %' OR  lastname LIKE 'Nguyen %'
+
+
+-- xem ds sv duoc sap xep theo thu tu ten (fname)
+select * from tbStudent order by fname
+
+-- xem ds sv duoc sap xep theo ngay sinh (dob)
+select * from tbStudent order by dob
+
+-- xem ds sv duoc sap xep theo ngay sinh (dob), nhung nho tuoi duoc xep truoc
+select * from tbStudent order by dob DESC
+
+
+-- dem so sinh vien nam, nu
+select gender, COUNT(*)   
+	from tbStudent 
+	group by gender
+
+select gender [gioi tinh], COUNT(*) [so luong sv]  
+	from tbStudent 
+	group by gender
+
+select case 
+		 when gender = 0 then 'nam' 
+		 when gender = 1 then 'nu'
+	   end [gioi tinh], 
+	COUNT(*) [so luong sv]  
+	from tbStudent 
+	group by gender
+
+-- hoac viet theo cu phap sau 
+select case 
+		 when gender = 0 then 'nam' 
+		 else 'nu'
+	   end [gioi tinh], 
+	COUNT(*) [so luong sv]  
+	from tbStudent 
+	group by gender
+go
+
+
