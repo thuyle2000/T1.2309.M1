@@ -102,6 +102,27 @@ class CourseDAO
         $cn->close();
         return $result;
     }
+
+
+    //thay doi noi 1 khoa hoc trong bang tbCoutse
+    public static function update(Course $new)
+    {
+        // 1. tao connection den CSDL db2309.m1
+        $cn = fn_connect_oop();
+
+        // 2. chinh sua noi dung khoa hoc trong bang khoa hoc
+        $sql = "UPDATE `tbcourse` 
+                SET `name`='$new->name', `fee`='$new->fee' 
+                WHERE `id`=$new->id";
+
+        $result = $cn->query($sql);
+        if ($result == false) {
+            echo "<p> LOI: khong the thay doi du lieu. <br/> " . $cn->error;
+        }
+        //dong ket noi
+        $cn->close();
+        return $result;
+    }
 }
 
 
