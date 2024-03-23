@@ -1,0 +1,13 @@
+
+OOP (s12)
+Explain Object-Oriented Programming Features in PHP
+Describe PHP Traits, Namespaces and Iterables
+
+OOP-method (s13) 
+Explain inheritance, interfaces, and abstract classes
+Describe method overloading, override
+
+Web concept (S14)
+Explain Browser and Platform Identification
+Identify the recent enhancements in PHP
+
