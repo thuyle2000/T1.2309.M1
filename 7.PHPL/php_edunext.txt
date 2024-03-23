@@ -11,3 +11,6 @@ Web concept (S14)
 Explain Browser and Platform Identification
 Identify the recent enhancements in PHP
 
+ajax (s15)
+Explain AJAX, work with AJAX, and Internet standards of AJAX
+Illustrate working with AJAX and PHP, MySQL
