@@ -4,7 +4,7 @@
 function fn_connect(){
     $host = "localhost:3306";
     $user = "root";
-    $db = "db2309.m1";
+    $db = "dbPHP";
     
     $cn = mysqli_connect(hostname:$host, username:$user,database:$db);
 
@@ -21,7 +21,7 @@ function fn_connect(){
 function fn_connect_oop(){
     $host = "localhost:3306";
     $user = "root";
-    $db = "db2309.m1";
+    $db = "dbPHP";
     
     $cn = new mysqli(hostname:$host, username:$user,database:$db);
 
